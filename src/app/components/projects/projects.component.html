@@ -1,0 +1,14 @@
+<div class="projects-container">
+  <mat-card *ngFor="let project of projectsData" class="project-card">
+    <img mat-card-image *ngIf="project.imageUrl" [src]="project.imageUrl" alt="{{ project.title }}">
+    <mat-card-content>
+      <mat-card-title>{{ project.title }}</mat-card-title>
+      <p>{{ project.description }}</p>
+      <div class="project-links">
+        <a mat-button *ngFor="let link of project.links" [href]="link.url" target="_blank">
+          {{ link.name }}
+        </a>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>
