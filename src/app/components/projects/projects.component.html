@@ -1,14 +1,22 @@
-<div class="projects-container">
-  <mat-card *ngFor="let project of projectsData" class="project-card">
-    <img mat-card-image *ngIf="project.imageUrl" [src]="project.imageUrl" alt="{{ project.title }}">
-    <mat-card-content>
-      <mat-card-title>{{ project.title }}</mat-card-title>
-      <p>{{ project.description }}</p>
-      <div class="project-links">
-        <a mat-button *ngFor="let link of project.links" [href]="link.url" target="_blank">
-          {{ link.name }}
-        </a>
+<div class="carousel-container">
+  <button class="carousel-control prev" (click)="prev()">&#10094;</button>
+  <div class="carousel-wrapper">
+    <div class="carousel-inner" [style.transform]="'translateX(' + transform + 'px)'">
+      <div class="carousel-item" *ngFor="let project of projectsData">
+        <mat-card class="project-card">
+          <img mat-card-image *ngIf="project.imageUrl" [src]="project.imageUrl" alt="{{ project.title }}">
+          <mat-card-content>
+            <mat-card-title>{{ project.title }}</mat-card-title>
+            <p>{{ project.description }}</p>
+            <div class="project-links">
+              <a mat-button *ngFor="let link of project.links" [href]="link.url" target="_blank">
+                {{ link.name }}
+              </a>
+            </div>
+          </mat-card-content>
+        </mat-card>
       </div>
-    </mat-card-content>
-  </mat-card>
+    </div>
+  </div>
+  <button class="carousel-control next" (click)="next()">&#10095;</button>
 </div>
