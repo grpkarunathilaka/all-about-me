@@ -1,10 +1,24 @@
-<!-- <mat-toolbar color="primary">
-  <span>{{ title }}</span>
-  <span class="spacer"></span>
-  <button mat-button routerLink="/">Profile</button>
-  <button mat-button routerLink="/projects">Projects</button>
-</mat-toolbar> -->
+<header class="header">
+  <a href="#" class="logo">Ranga Gamage</a>
+  <nav class="nav-bar">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
 
 <div class="content">
-  <app-profile></app-profile>
+  <section id="about">
+    <app-profile></app-profile>
+  </section>
+  <section id="projects">
+    <app-projects></app-projects>
+  </section>
+  <section id="contact">
+    <!-- Add contact form here -->
+  </section>
 </div>
+
+<footer class="footer">
+  <p>&copy; 2025 Ranga Gamage</p>
+</footer>

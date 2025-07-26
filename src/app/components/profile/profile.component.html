@@ -7,28 +7,6 @@
       I’m a senior software engineer with over 15 years of experience in developing and maintaining software applications. I specialize in Microsoft technologies including C#, ASP.NET, and SQL Server.
     </p>
 
-    <div class="section">
-      <h5>Projects</h5>
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card white">
-            <div class="card-content">
-              <span class="card-title blue-text text-darken-2">rediCASE</span>
-              <p>A case management application for community health sectors.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col s12 m6">
-          <div class="card white">
-            <div class="card-content">
-              <span class="card-title blue-text text-darken-2">TimeTracker</span>
-              <p>A time tracking tool for monitoring work hours and productivity.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
     <div class="contact-info">
       <a *ngIf="profileData.contact.email" mat-icon-button href="mailto:{{ profileData.contact.email }}">
         <mat-icon>email</mat-icon>
@@ -43,31 +21,4 @@
         <mat-icon svgIcon="twitter"></mat-icon>
       </a>
     </div>
-  </div>
-
-  <!-- Materialize JS CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-
-
-<!-- <mat-card *ngIf="profileData" class="profile-card">
-  <img mat-card-image [src]="profileData.profilePic" alt="Profile Picture">
-  <mat-card-content>
-    <mat-card-title>{{ profileData.name }}</mat-card-title>
-    <mat-card-subtitle>{{ profileData.title }}</mat-card-subtitle>
-    <p>{{ profileData.bio }}</p>
-    <div class="contact-info">
-      <a *ngIf="profileData.contact.email" mat-icon-button href="mailto:{{ profileData.contact.email }}">
-        <mat-icon>email</mat-icon>
-      </a>
-      <a *ngIf="profileData.contact.linkedin" mat-icon-button [href]="profileData.contact.linkedin" target="_blank">
-        <mat-icon svgIcon="linkedin"></mat-icon>
-      </a>
-      <a *ngIf="profileData.contact.github" mat-icon-button [href]="profileData.contact.github" target="_blank">
-        <mat-icon svgIcon="github"></mat-icon>
-      </a>
-      <a *ngIf="profileData.contact.twitter" mat-icon-button [href]="profileData.contact.twitter" target="_blank">
-        <mat-icon svgIcon="twitter"></mat-icon>
-      </a>
-    </div>
-  </mat-card-content>
-</mat-card> -->
+</div>
